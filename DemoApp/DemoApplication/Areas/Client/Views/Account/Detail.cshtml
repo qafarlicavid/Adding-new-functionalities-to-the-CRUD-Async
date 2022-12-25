@@ -1,0 +1,30 @@
+﻿@model DemoApplication.Areas.Client.ViewModels.Account.UpdateDetailsViewModel
+   
+<!-- Single Tab Content Start -->
+<div class="tab-pane col-lg-9" id="account-info" role="tabpanel">
+    <div class="myaccount-content">
+        <h3>Account Details</h3>
+        <div class="account-details-form">
+            <form asp-route="client-account-details">
+                <div class="row">
+                    <div class="col-lg-6 col-12  mb--30">
+                         <label asp-for="FirstName">FirstName</label>
+                                <input asp-for="FirstName" class="mb-0 form-control" id="email" placeholder="FirstName">
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="col-lg-6 col-12  mb--30">
+                        <label asp-for="LastName">LastName</label>
+                                <input asp-for="LastName" class="mb-0 form-control" id="email" placeholder="LastName">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn--primary mb--20">Save Changes</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Single Tab Content End -->

@@ -1,0 +1,24 @@
+﻿@using DemoApplication.Services.Abstracts;
+@inject IUserService userService;
+@model DemoApplication.Areas.Client.ViewModels.Account.Address.ItemViewModel
+
+<div class="col-lg-9 col-12 mt--30 mt-lg--0">
+    <div class="myaccount-content">
+        <h3>Billing Address</h3>
+        <address>
+            <p>
+                <strong>
+                    @($"{Model.AcceptorFirstName} {Model.AcceptorLastName}")
+                </strong>
+            </p>
+            <p>
+                @Model.AddressName
+            </p>
+            <p> @Model.PhoneNumber</p>
+        </address>
+        <a asp-route="client-account-update-addresses" class="btn btn--primary">
+            <i class="fa fa-edit"></i>Edit
+            Address
+        </a>
+    </div>
+</div>
